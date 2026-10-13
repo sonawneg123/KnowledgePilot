@@ -1,0 +1,11 @@
+{
+  "client": {
+    "source": "apps/web/dist"
+  },
+  "appsail": [
+    {
+      "name": "knowledgepilot-server",
+      "source": "apps/server"
+    }
+  ]
+}

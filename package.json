@@ -1,0 +1,24 @@
+{
+  "name": "knowledgepilot",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Multi-agent evidence-backed research system powered by Groq and Zoho Catalyst",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace=@knowledgepilot/shared && npm run build --workspace=@knowledgepilot/server && npm run build --workspace=@knowledgepilot/web",
+    "dev:server": "npm run dev --workspace=@knowledgepilot/server",
+    "dev:web": "npm run dev --workspace=@knowledgepilot/web",
+    "test": "npm run test --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "clean": "npm run clean --workspaces --if-present"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
